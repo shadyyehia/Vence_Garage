@@ -16,6 +16,7 @@ namespace Logic
         {
             try
             {
+                Console.WriteLine("Garage simulation started ...");
                 RepositoryWrapper _wrapper = new RepositoryWrapper(new RepositoryContext());
 
                 //Initiate The Garage with 2 levels , each with 3 spots
@@ -35,7 +36,7 @@ namespace Logic
                     (bool IsInside,GarageSpot spot ) = _wrapper.GarageRepo.EnterVehicle(vehicle);
                     if (IsInside)
                     {
-                        Console.WriteLine("A Vehicle with License Plate " + vehicle.LicensePlate + " has entered " + spot.SpotNumber + " spot");
+                        Console.WriteLine("A Vehicle with License Plate " + vehicle.LicensePlate + " has entered " + spot.SpotNumber + " spot");                        
                         Thread.Sleep(1000);
                     }
                     else
